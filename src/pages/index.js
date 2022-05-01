@@ -2,6 +2,7 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
+import "../styles/app.css"
 const IndexPage = ({ data }) => {
   const blogPosts = data.allGhostPost.edges
   return (
@@ -17,7 +18,7 @@ const IndexPage = ({ data }) => {
                   image={post.node.remote_image.childImageSharp.gatsbyImageData}
                   alt={post.node.title}
                 />
-                <p>{post.node.title}</p>
+                <h2>{post.node.title}</h2>
               </Link>
             </li>
           ))}
